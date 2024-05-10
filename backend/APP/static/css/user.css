@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../images/face.jpeg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: white;
+    font-size: 50px;
+    margin-top: 30px;
+}
+form{
+    margin-top: 75vh;
+    margin-right: 700px;
+}
+form button{
+    width: 180px;
+    height: 50px;
+    border: 2px solid white;
+    outline: none;
+    background-color: transparent;
+    border-radius: 40px;
+    transition: all 1s ease-out;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+}
+
+form button:hover{
+    background-color: cyan;
+    border: none;
+    color: black;
+}

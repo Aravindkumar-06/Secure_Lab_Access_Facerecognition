@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <title>Dash Board</title>
+</head>
+<body>
+    <div class="nav">
+        <h1>ADMIN DASHBOARD</h1>
+    
+    <a href="{% url 'user-logout' %}">Logout</a>
+    </div>
+    <div class="container">
+        <a href="{% url 'adduser' %}"><button>ADD USER</button></a>
+        <a href="{% url 'deleteuser' %}"><button>DELETE USER</button></a>
+    </div>
+</body>
+</html>

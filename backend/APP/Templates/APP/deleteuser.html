@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete User</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/deleteuser.css' %}">
+</head>
+<body>
+    <form action="{% url 'deleteuser' %}" method="POST">
+        {% for m in messages %}
+        <p>{{m}}</p>
+        {% endfor %}
+        {% csrf_token %}
+        <h1>DELETE USER</h1>
+        {% load static %}
+        <p>Enter the Email of the User that you want to delete</p>
+        <input type="text" placeholder="Enter Here" name="email">
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>

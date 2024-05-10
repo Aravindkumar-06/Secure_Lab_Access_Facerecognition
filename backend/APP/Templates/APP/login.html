@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Login</title>
+</head>
+
+<body>
+    
+    <form action="{% url 'my_login' %}" method="POST">
+        {% for m in messages %}
+    <p style="color:red;font-size: 16px;text-align: center;">{{m}}</p>
+    {% endfor %}
+        
+        <h1>Login</h1>
+        {% csrf_token %}
+
+        <div class="inputbox">
+            <input type="text" name="username" maxlength="150" required="" id="id_username" placeholder="Username">
+            <span class="fa-solid fa-user"></span>
+
+        </div>
+
+
+        <div class="inputbox">
+            <input type="password" name="password" required="" id="id_password" placeholder="Password">
+            <box-icon name='lock' type='solid' ></box-icon>
+        </div>
+
+        <div class="btn">
+            <button type="submit" class="btn">Login</button>
+        </div>
+        {% for message in messages %}
+        <p></p>
+        {% endfor%}
+    </form>
+
+    <!-- <form action="" method="POST">
+        <h1>Login</h1>
+        {% csrf_token %}
+
+        {{loginform.as_p}}
+
+        <button type="submit">Login</button>
+    </form> -->
+</body>
+
+</html>

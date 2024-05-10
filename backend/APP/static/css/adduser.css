@@ -1,0 +1,70 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../images/adduser.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+form{
+    width: 460px;
+    border-radius: 12px;
+    padding: 25px 40px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent;
+    backdrop-filter: blur(30px);
+}
+
+form h1{
+    text-align: center;
+    color: orange;
+    margin-bottom: 30px;
+}
+form .inputbox{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 30px;
+}
+
+.inputbox input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    font-size: 16px;
+    color: white;
+    padding: 20px 45px 20px 20px;
+}
+
+.inputbox input::placeholder{
+    color: white;
+    accent-color: white;
+}
+.file{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+
+form button{
+    width: 100%;
+    height: 45px;
+    background-color: orange;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+}
+

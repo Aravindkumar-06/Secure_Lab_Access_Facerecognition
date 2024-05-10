@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/card.css' %}">
+    <title>Card Scanning</title>
+</head>
+<body>
+    <!-- <h4 class="w3-animate-fading">Face Successfully Recognized</h4> -->
+    {% for m in messages %}
+    <p style="color:white;font-size: large;background-color: green;width:100%;height:40px; margin-top: 30px;display: flex;align-items: center;justify-content: center;">{{m}}</p>
+    {% endfor %}
+    <form action="{% url 'is_card_scanner_available' %}" method="POST">
+        {% csrf_token %}
+        <p>Now You need to scan your card</p>
+        <button type="submit">Scan Card</button>
+    </form>
+</body>
+</html>
